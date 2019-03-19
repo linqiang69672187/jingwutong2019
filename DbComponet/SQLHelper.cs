@@ -168,6 +168,8 @@ namespace DbComponent
             {
                 conn.Open();
                 SqlDataAdapter dr = new SqlDataAdapter(cmdText,conn);
+                dr.SelectCommand.CommandTimeout = 300;
+
                 DataSet ds = new DataSet();
                 foreach (SqlParameter Parameter in Parameters)
                 {
