@@ -73,12 +73,12 @@ namespace JingWuTong.Handle
             devtypes = SQLHelper.ExecuteRead(CommandType.Text, "SELECT TypeName,ID FROM [dbo].[DeviceType] where ID<7  ORDER by Sort ", "11");
            // log.Info("读取zfData表");
 
-            zfData = SQLHelper.ExecuteRead(CommandType.Text, "SELECT VideLength, [FileSize] ,[UploadCnt],[GFUploadCnt],de.BMDM,de.DevId,substring(convert(varchar,[Time],120),12,5) Time FROM [EveryDayInfo_ZFJLY_Hour] al left join Device de on de.DevId = al.DevId  left join ACL_USER as us on de.JYBH = us.JYBH     where " + sreachcondi + "   [Time] >='" + begintime + "' and [Time] <='" + endtime + " 23:59' and de.devType='5' ", "Alarm_EveryDayInfo");
+            zfData = SQLHelper.ExecuteRead(CommandType.Text, "SELECT VideLength, [FileSize] ,[UploadCnt],[GFUploadCnt],de.BMDM,de.DevId,[Time] from (SELECT sum(VideLength) VideLength, sum([FileSize]) [FileSize],sum([UploadCnt]) [UploadCnt],sum([GFUploadCnt]) [GFUploadCnt],DevId,substring(convert(varchar,[Time],120),12,5) Time FROM [EveryDayInfo_ZFJLY_Hour]    where    [Time] >='" + begintime + "' and [Time] <='" + endtime + " 23:59' group by substring(convert(varchar,[Time],120),12,5),DevId)   al left join Device de on de.DevId = al.DevId  left join ACL_USER as us on de.JYBH = us.JYBH     where  " + sreachcondi + "    de.devType =5", "Alarm_EveryDayInfo");
           //  log.Info("表zfData完成");
 
             dUser = SQLHelper.ExecuteRead(CommandType.Text, "SELECT en.SJBM,us.BMDM,us.XM FROM [dbo].[ACL_USER] us  left join  Entity en  on us.BMDM = en.BMDM ", "user");
            // log.Info("读取Data表");
-            Data = SQLHelper.ExecuteRead(CommandType.Text, "SELECT OnlineTime, [HandleCnt] ,[CXCnt],de.BMDM,de.DevId,substring(convert(varchar,[Time],120),12,5) Time,de.devtype FROM [EverydayInfo_Hour] al left join Device de on de.DevId = al.DevId  left join ACL_USER as us on de.JYBH = us.JYBH     where " + sreachcondi + "   [Time] >='" + begintime + "' and [Time] <='" + endtime + " 23:59' and de.devType in (1,2,3,4,6)", "Alarm_EveryDayInfo");
+            Data = SQLHelper.ExecuteRead(CommandType.Text, "SELECT OnlineTime, [HandleCnt] ,[CXCnt],de.BMDM,de.DevId,Time,de.devtype from (SELECT sum(OnlineTime) OnlineTime, sum([HandleCnt]) [HandleCnt],sum(ISNULL(cxcnt,0)) cxcnt,DevId,substring(convert(varchar,[Time],120),12,5) Time FROM [EverydayInfo_Hour]    where    [Time] >='" + begintime + "' and [Time] <='" + endtime + " 23:59' group by substring(convert(varchar,[Time],120),12,5),DevId)   al left join Device de on de.DevId = al.DevId  left join ACL_USER as us on de.JYBH = us.JYBH     where  " + sreachcondi + "    de.devType in (1,2,3,4,6)", "Alarm_EveryDayInfo");
           //  log.Info("表Data完成");
 
 

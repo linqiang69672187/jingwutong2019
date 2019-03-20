@@ -25,3 +25,9 @@ C:\工作\jingwutong2018\DbComponet\bin\Release\log4net.dll
 C:\工作\jingwutong2018\DbComponet\obj\Release\DbComponet.csprojResolveAssemblyReference.cache
 C:\工作\jingwutong2018\DbComponet\obj\Release\DbComponet.dll
 C:\工作\jingwutong2018\DbComponet\obj\Release\DbComponet.pdb
+E:\工作\Jingwutong_2019\DbComponet\bin\Release\DbComponet.dll
+E:\工作\Jingwutong_2019\DbComponet\bin\Release\DbComponet.pdb
+E:\工作\Jingwutong_2019\DbComponet\bin\Release\GemBox.Spreadsheet.dll
+E:\工作\Jingwutong_2019\DbComponet\bin\Release\log4net.dll
+E:\工作\Jingwutong_2019\DbComponet\obj\Release\DbComponet.dll
+E:\工作\Jingwutong_2019\DbComponet\obj\Release\DbComponet.pdb

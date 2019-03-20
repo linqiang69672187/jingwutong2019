@@ -9,6 +9,7 @@ var type;
 var ssddtext;
 var tablezd;
 var seltype;
+var cxentityid
 var pagecount;
 var todaytotaldata = [];
 var searchtext;
@@ -666,7 +667,8 @@ function createtabledetail() {
                         ssddtext: ssddtext,
                         searchtext: searchtext,
                         ssdd: ssdd,
-                        sszd:sszd
+                        sszd: sszd,
+                        cxentityid: cxentityid
                     };
 
                 }
@@ -776,6 +778,7 @@ function createDataTable() {
                  $('.btnsjx').removeAttr("disabled");
 
                  seltype = $("#deviceselect").val();
+                 cxentityid = $("#brigadeselect").val();
                  let gongshi;
                  switch ($("#deviceselect").val()) {
                      case "1":   //车载视频
