@@ -11,10 +11,9 @@ namespace WSExportExcell
 {
     public class Excell
     {
-        public static int WSExportExcell(string tmpath) { 
+        public static int WSExportExcell(string tmpath,string[] dbs) { 
         ExcelFile excelFile = new ExcelFile();
 
-        string[] dbs = new string[] { "ACL_USER", "Device", "Entity", "Gps", "Position", "Role", "ProjectDetail", "ProjectFZR", "ProjectInfo", "Buttons", "Pages", "role_power" };
         DataTable dataTable = new DataTable();
             for (int h = 0; h<dbs.Length; h++)
             {
