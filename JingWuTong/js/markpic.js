@@ -15,6 +15,22 @@
             src: 'img/devicepic/4/2.png'
         }))
     }),
+    fjt_1: new ol.style.Style({
+        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+            anchor: [0.5, 56],
+            anchorXUnits: 'fraction',
+            anchorYUnits: 'pixels',
+            src: 'img/devicepic/6/1.png'
+        }))
+    }),
+    fjt_2: new ol.style.Style({
+        image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
+            anchor: [0.5, 56],
+            anchorXUnits: 'fraction',
+            anchorYUnits: 'pixels',
+            src: 'img/devicepic/6/2.png'
+        }))
+    }),
     car_1: new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */({
             anchor: [0.5, 56],

@@ -10,16 +10,14 @@
 
        function init() {
            $.ajax({
-               type: "POST",
-               url: "http://127.0.0.1:9000/",
-               data: { 'name': '林强' },
+               type: 'post',
                dataType: "json",
-               success: function (data) {
-                 
-                   alert(data[0].name);
+               url: 'http://192.168.83.128/home/hello',
+               data: {
+                   name: 'beck'
                },
-               error: function (msg) {
-                   console.debug("错误:ajax");
+               success: function (result) {
+                   $('#result').html(result.data);
                }
            });
        }

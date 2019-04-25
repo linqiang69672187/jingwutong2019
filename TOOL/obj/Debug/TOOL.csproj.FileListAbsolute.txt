@@ -29,4 +29,5 @@ E:\工作\Jingwutong_2019\TOOL\bin\Debug\TOOL.dll
 E:\工作\Jingwutong_2019\TOOL\bin\Debug\TOOL.pdb
 E:\工作\Jingwutong_2019\TOOL\obj\Debug\TOOL.dll
 E:\工作\Jingwutong_2019\TOOL\obj\Debug\TOOL.pdb
-E:\工作\Jingwutong_2019\TOOL\obj\Debug\TOOL.csprojResolveAssemblyReference.cache
+E:\工作\Jingwutong_2019\TOOL\obj\Debug\TOOL.csprojAssemblyReference.cache
+E:\工作\Jingwutong_2019\TOOL\obj\Debug\TOOL.csproj.CoreCompileInputs.cache

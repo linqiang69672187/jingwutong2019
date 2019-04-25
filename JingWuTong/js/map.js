@@ -239,6 +239,7 @@ $(document).on('click.bs.carousel.data-api', '#cz-bianji,.fa-close', function (e
         vectorLayer.setVisible(true);
         vectorLayerjwt.setVisible(true);
         vectorLayerdjj.setVisible(true);
+        vectorLayerfjw.setVisible(true);
         loadmapdataInter = setInterval("loadmarks()", 15000);
         return;
     } else {
@@ -248,6 +249,7 @@ $(document).on('click.bs.carousel.data-api', '#cz-bianji,.fa-close', function (e
         vectorLayer.setVisible(false);
         vectorLayerjwt.setVisible(false);
         vectorLayerdjj.setVisible(false);
+        vectorLayerfjt.setVisible(false);
         $(".zq1").hide();
         if (loadmapdataInter) { clearInterval(loadmapdataInter) };
         $("#histrorysearch").css("visibility", "visible");
@@ -413,6 +415,9 @@ $(document).on('click.bs.carousel.data-api', '.table .fa-map-marker', function (
         case "4":
             feature = vectorLayerjwt.getSource().getFeatureById(devid);
             break;
+        case "6":
+            feature = vectorLayerfjt.getSource().getFeatureById(devid);
+            break;
         case "2":
             feature = vectorLayerdjj.getSource().getFeatureById(devid);
             break;
@@ -483,7 +488,7 @@ function devitypename(typeid) {
             typename = "执法记录仪";
             break;
         case "6":
-            typename = "警务通";
+            typename = "辅警通";
             break;
         case "7":
             typename = "测速仪";

@@ -9,6 +9,10 @@ var vectorSourcejwt = new ol.source.Vector({
 var vectorSourcedjj = new ol.source.Vector({
     features: [] //add an array of features
 });
+var vectorSourcefjt = new ol.source.Vector({
+    features: [] //add an array of features
+});
+
 var vectorLayer = new ol.layer.Vector({
     source: vectorSource,
     title: '车载视频',
@@ -22,6 +26,11 @@ var vectorLayerjwt = new ol.layer.Vector({
 var vectorLayerdjj = new ol.layer.Vector({
     source: vectorSourcedjj,
     title: '对讲机',
+    visible: true
+});
+var vectorLayerfjt = new ol.layer.Vector({
+    source: vectorSourcefjt,
+    title: '辅警通',
     visible: true
 });
 
@@ -157,6 +166,7 @@ map.addLayer(
            vectorLayer,
            vectorLayerjwt,
            vectorLayerdjj,
+           vectorLayerfjt,
            tracevector,
            tracepointlayer
         ]
@@ -195,6 +205,7 @@ function loadmarks() {
                     vectorLayer.getSource().clear();
                     vectorLayerjwt.getSource().clear();
                     vectorLayerdjj.getSource().clear();
+                    vectorLayerfjt.getSource().clear();
                 }
                 else {
                     addmarks(data.result);
@@ -203,6 +214,7 @@ function loadmarks() {
                 vectorLayer.getSource().clear();
                 vectorLayerjwt.getSource().clear();
                 vectorLayerdjj.getSource().clear();
+                vectorLayerfjt.getSource().clear();
             }
 
 
@@ -323,6 +335,9 @@ function createinfovisible(){
         if (!feature) {
             feature = vectorLayerdjj.getSource().getFeatureById(devid);
         }
+        if (!feature) {
+            feature = vectorLayerfjt.getSource().getFeatureById(devid);
+        }
         createfeatureinfo(feature);
     }
 }
@@ -333,7 +348,7 @@ function addmarks(points) {
     vectorLayer.getSource().clear();
     vectorLayerjwt.getSource().clear();
     vectorLayerdjj.getSource().clear();
-
+    vectorLayerfjt.getSource().clear();
     for (var i = 0; i < points.length; i++) {
         var point = points[i];
         if (point.La < 90) { continue; }
@@ -365,6 +380,9 @@ function addmarks(points) {
             case "2":
                 vectorLayerdjj.getSource().addFeature(iconFeature);
                 break;
+            case "6":
+                vectorLayerfjt.getSource().addFeature(iconFeature);
+                break;
         }
 
          // point_overlay.setPosition(ol.proj.transform([parseFloat(point.La), parseFloat(point.Lo)], 'EPSG:4326', 'EPSG:3857'));
@@ -380,6 +398,13 @@ function Seticon(point, feature) {
         case "40":
             feature.setStyle(markicon.jingwutong_2);
             break;
+        case "61":
+            feature.setStyle(markicon.fjt_1);
+            break;
+        case "60":
+            feature.setStyle(markicon.fjt_2);
+            break;
+
         case "10":
             if (point.Cartype == "摩托车") {
                 feature.setStyle(markicon.moto_2);

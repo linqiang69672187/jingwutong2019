@@ -132,6 +132,8 @@ E:\工作\Jingwutong_2019\JingWuTong\bin\DbComponet.pdb
 E:\工作\Jingwutong_2019\JingWuTong\bin\Model.pdb
 E:\工作\Jingwutong_2019\JingWuTong\bin\TOOL.pdb
 E:\工作\Jingwutong_2019\JingWuTong\bin\WSExportExcell.pdb
-E:\工作\Jingwutong_2019\JingWuTong\obj\Debug\Web.csprojResolveAssemblyReference.cache
 E:\工作\Jingwutong_2019\JingWuTong\obj\Debug\JingWuTong.dll
 E:\工作\Jingwutong_2019\JingWuTong\obj\Debug\JingWuTong.pdb
+E:\工作\Jingwutong_2019\JingWuTong\obj\Debug\Web.csprojAssemblyReference.cache
+E:\工作\Jingwutong_2019\JingWuTong\obj\Debug\Web.csproj.CoreCompileInputs.cache
+E:\工作\Jingwutong_2019\JingWuTong\obj\Debug\Web.csproj.CopyComplete

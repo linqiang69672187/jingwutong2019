@@ -27,3 +27,5 @@ E:\工作\Jingwutong_2019\Model\bin\Debug\Model.dll
 E:\工作\Jingwutong_2019\Model\bin\Debug\Model.pdb
 E:\工作\Jingwutong_2019\Model\obj\Debug\Model.dll
 E:\工作\Jingwutong_2019\Model\obj\Debug\Model.pdb
+E:\工作\Jingwutong_2019\Model\obj\Debug\Model.csprojAssemblyReference.cache
+E:\工作\Jingwutong_2019\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
