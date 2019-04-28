@@ -240,6 +240,7 @@ function showfeatureinfo(IsOnline, Contacts, Name, Tel, devid, PlateNumber, DevT
             $(".zq-cwrap1 .row:eq(2)").hide();
             break;
         case "4":
+        case "6":
             $(".zq-cwrap1 .row:eq(4)").hide();
             $(".zq-cwrap1 .row:eq(1)").show()
             $(".zq-cwrap1 .col-md-7:eq(1)").text(IMEI);
