@@ -22,7 +22,7 @@ namespace JingWuTong.Handle
             var tmpath = "  ";
             var filename = "bakDB_" + DateTime.Now.ToString().Replace("/", "").Replace(" ", "").Replace(":", "");
             tmpath = HttpContext.Current.Server.MapPath("upload\\" + filename + ".xls");
-            string[] dbs = new string[] { "ACL_USER", "Device", "Entity", "Gps", "Position", "Role", "ProjectDetail", "ProjectFZR", "ProjectInfo", "Buttons", "Pages", "role_power" };
+            string[] dbs = new string[] { "ACL_USER", "Device", "Entity", "Gps", "Position", "Role", "ProjectDetail", "ProjectFZR", "ProjectInfo", "Buttons", "Pages", "role_power", "EverydayInfo_Hour" };
             Excell.WSExportExcell(tmpath, dbs);
             StringBuilder retJson = new StringBuilder();
             retJson.Append("{\"");

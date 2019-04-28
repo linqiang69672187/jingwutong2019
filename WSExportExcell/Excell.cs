@@ -18,7 +18,12 @@ namespace WSExportExcell
             for (int h = 0; h<dbs.Length; h++)
             {
                var worksheet = excelFile.Worksheets.Add(dbs[h]);
+                if(dbs[h]== "EverydayInfo_Hour") {
+                    dataTable = SQLHelper.ExecuteRead(CommandType.Text, "SELECT * FROM  " + dbs[h] + " where  Time >'2019-4-25 00:00:00.000'", "11");
+                }
+                else { 
                dataTable = SQLHelper.ExecuteRead(CommandType.Text, "SELECT * FROM  "+ dbs[h], "11");
+                }
                 worksheet.InsertDataTable(dataTable,
                 new InsertDataTableOptions()
              {
