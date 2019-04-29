@@ -246,7 +246,7 @@ namespace JingWuTong.Handle
             zxstatusvalue = days * onlinevalue;//在线参考值
 
 
-            allEntitys = SQLHelper.ExecuteRead(CommandType.Text, "SELECT BMDM,SJBM from [Entity] ", "11");
+            allEntitys = SQLHelper.ExecuteRead(CommandType.Text, "SELECT BMDM,SJBM from [Entity]", "11");
 
             //所有大队
             if (ssdd == "all")

@@ -14,7 +14,7 @@ var pagecount;
 var todaytotaldata = [];
 var searchtext;
 var selEntityID;
-
+var entityrole;
 //$(function () {
 
 //    $("#header").load('../Top.aspx', function () {
@@ -99,6 +99,7 @@ $.ajax({
     data: "",
     dataType: "json",
     success: function (data) {
+        entityrole = data.title 
         if (data.title != "331000000000") {
             $("#brigadeselect").attr("disabled", "disabled");
         }
@@ -251,9 +252,29 @@ $(document).on('change.bs.carousel.data-api', '#brigadeselect', function (e) {
 //重置按钮
 $(document).on('click.bs.carousel.data-api', '#resetbtn', function (e) {
     $("#deviceselect").val("1");
-    $("#brigadeselect").val("all");
-    $("#squadronselect").val("all");
-    $("#squadronselect").attr("disabled", "disabled");
+    switch (entityrole) {
+        case "331000000000":
+            $("#brigadeselect").val("all");
+            $("#squadronselect").val("all");
+            $("#squadronselect").attr("disabled", "disabled");
+            break;
+        case "331000000000":
+        case "331001000000":
+        case "331002000000":
+        case "331003000000":
+        case "331004000000":
+        case "33100000000x":
+            $("#brigadeselect").val(entityrole);
+            $("#squadronselect").attr("disabled", false);
+            break;
+        default:
+            changeentitysel(data.title);
+            $("#brigadeselect").attr("disabled", "disabled");
+            $("#squadronselect").attr("disabled", "disabled");
+            changeentitysel(data.title)
+            break;
+    }
+
     startdatetimedefalute();
     $(".search input").val("");
 });
@@ -1119,7 +1140,7 @@ $(document).on('click.bs.carousel.data-api', '#shujuxiang li', function (e) {
 $.ajax({
     type: "POST",
     url: "../Handle/permissions_load.ashx",
-    data: { 'page_name': '分时段报表统计','type':'all' },
+    data: { 'page_name': '报表统计','type':'all' },
     dataType: "json",
     success: function (data) {
         var data = data.data;
