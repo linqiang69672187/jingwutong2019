@@ -72,3 +72,14 @@ E:\工作\Jingwutong2019_new\DAL\bin\Debug\TOOL.pdb
 E:\工作\Jingwutong2019_new\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 E:\工作\Jingwutong2019_new\DAL\obj\Debug\DAL.dll
 E:\工作\Jingwutong2019_new\DAL\obj\Debug\DAL.pdb
+E:\工作\JingWuTong_2019new\DAL\bin\Debug\DAL.dll
+E:\工作\JingWuTong_2019new\DAL\bin\Debug\DAL.pdb
+E:\工作\JingWuTong_2019new\DAL\bin\Debug\Model.dll
+E:\工作\JingWuTong_2019new\DAL\bin\Debug\TOOL.dll
+E:\工作\JingWuTong_2019new\DAL\bin\Debug\Model.pdb
+E:\工作\JingWuTong_2019new\DAL\bin\Debug\TOOL.pdb
+E:\工作\JingWuTong_2019new\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\工作\JingWuTong_2019new\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\工作\JingWuTong_2019new\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\工作\JingWuTong_2019new\DAL\obj\Debug\DAL.dll
+E:\工作\JingWuTong_2019new\DAL\obj\Debug\DAL.pdb

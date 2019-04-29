@@ -35,3 +35,9 @@ E:\工作\Jingwutong2019_new\TOOL\bin\Debug\TOOL.dll
 E:\工作\Jingwutong2019_new\TOOL\bin\Debug\TOOL.pdb
 E:\工作\Jingwutong2019_new\TOOL\obj\Debug\TOOL.dll
 E:\工作\Jingwutong2019_new\TOOL\obj\Debug\TOOL.pdb
+E:\工作\JingWuTong_2019new\TOOL\bin\Debug\TOOL.dll
+E:\工作\JingWuTong_2019new\TOOL\bin\Debug\TOOL.pdb
+E:\工作\JingWuTong_2019new\TOOL\obj\Debug\TOOL.csprojAssemblyReference.cache
+E:\工作\JingWuTong_2019new\TOOL\obj\Debug\TOOL.csproj.CoreCompileInputs.cache
+E:\工作\JingWuTong_2019new\TOOL\obj\Debug\TOOL.dll
+E:\工作\JingWuTong_2019new\TOOL\obj\Debug\TOOL.pdb

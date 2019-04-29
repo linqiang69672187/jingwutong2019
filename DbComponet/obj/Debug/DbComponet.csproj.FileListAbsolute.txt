@@ -50,3 +50,12 @@ E:\工作\Jingwutong2019_new\DbComponet\bin\Debug\log4net.dll
 E:\工作\Jingwutong2019_new\DbComponet\obj\Debug\DbComponet.dll
 E:\工作\Jingwutong2019_new\DbComponet\obj\Debug\DbComponet.pdb
 E:\工作\Jingwutong2019_new\DbComponet\obj\Debug\DbComponet.csprojResolveAssemblyReference.cache
+E:\工作\JingWuTong_2019new\DbComponet\bin\Debug\DbComponet.dll
+E:\工作\JingWuTong_2019new\DbComponet\bin\Debug\DbComponet.pdb
+E:\工作\JingWuTong_2019new\DbComponet\bin\Debug\GemBox.Spreadsheet.dll
+E:\工作\JingWuTong_2019new\DbComponet\bin\Debug\log4net.dll
+E:\工作\JingWuTong_2019new\DbComponet\obj\Debug\DbComponet.csprojAssemblyReference.cache
+E:\工作\JingWuTong_2019new\DbComponet\obj\Debug\DbComponet.csproj.CoreCompileInputs.cache
+E:\工作\JingWuTong_2019new\DbComponet\obj\Debug\DbComponet.csproj.CopyComplete
+E:\工作\JingWuTong_2019new\DbComponet\obj\Debug\DbComponet.dll
+E:\工作\JingWuTong_2019new\DbComponet\obj\Debug\DbComponet.pdb

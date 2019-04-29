@@ -262,3 +262,6 @@ __pycache__/
 
 /.vs/
 /upload/
+*.config
+*.dll
+*.pdb
