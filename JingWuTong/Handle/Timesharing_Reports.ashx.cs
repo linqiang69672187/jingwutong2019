@@ -295,7 +295,9 @@ namespace JingWuTong.Handle
 
                             break;
                         default:
-                            Alarm_EveryDayInfo = SQLHelper.ExecuteRead(CommandType.Text, "WITH childtable(BMMC,BMDM,SJBM) as (SELECT BMMC,BMDM,SJBM FROM [Entity] WHERE SJBM= '" + ssdd + "' OR BMDM = '" + ssdd + "' " +" UNION ALL "+" SELECT A.BMMC,A.BMDM,A.SJBM FROM [Entity] A,childtable b where a.SJBM = b.BMDM )"+" SELECT en.BMDM,  en.[SJBM] as ParentID,us.XM as [Contacts],de.[DevId],ala.在线时长,2 as AlarmType,0 as 文件大小,ala.查询量,ala.处理量, Time from " + "( select DevId,substring(convert(varchar,[Time],120),12,5) as Time,sum(OnlineTime) as 在线时长,sum(Isnull(HandleCnt,0)) as 处理量,sum(Isnull(CXCnt,0)) as 查询量 from EverydayInfo_Hour where    Time >='" + begintime + "' and Time <='" + endtime + " 23:59' group by substring(convert(varchar,[Time],120),12,5), DevId  ) as ala " + " left join [Device] as de on de.[DevId] = ala.[DevId] left join [Entity] as en on en.[BMDM] = de.[BMDM]    left join ACL_USER as us on de.JYBH = us.JYBH where " + sreachcondi + " de.[DevType]=" + type + " and de.BMDM in (select BMDM from childtable) ", "Alarm_EveryDayInfo");
+                                //Alarm_EveryDayInfo = SQLHelper.ExecuteRead(CommandType.Text, "WITH childtable(BMMC,BMDM,SJBM) as (SELECT BMMC,BMDM,SJBM FROM [Entity] WHERE SJBM= '" + ssdd + "' OR BMDM = '" + ssdd + "' " + " UNION ALL " + " SELECT A.BMMC,A.BMDM,A.SJBM FROM [Entity] A,childtable b where a.SJBM = b.BMDM )" + " SELECT en.BMDM,  en.[SJBM] as ParentID,us.XM as [Contacts],de.[DevId],ala.在线时长,2 as AlarmType,0 as 文件大小,ala.查询量,ala.处理量, Time from " + "( select DevId,substring(convert(varchar,[Time],120),12,5) as Time,sum(OnlineTime) as 在线时长,sum(Isnull(HandleCnt,0)) as 处理量,sum(Isnull(CXCnt,0)) as 查询量 from EverydayInfo_Hour where    Time >='" + begintime + "' and Time <='" + endtime + " 23:59' group by substring(convert(varchar,[Time],120),12,5), DevId  ) as ala " + " left join [Device] as de on de.[DevId] = ala.[DevId] left join [Entity] as en on en.[BMDM] = de.[BMDM]    left join ACL_USER as us on de.JYBH = us.JYBH where " + sreachcondi + " de.[DevType]=" + type + " and de.BMDM in (select BMDM from childtable) ", "Alarm_EveryDayInfo");
+
+                                Alarm_EveryDayInfo = SQLHelper.ExecuteRead(CommandType.Text, " SELECT en.BMDM,  en.[SJBM] as ParentID,us.XM as [Contacts],de.[DevId],ala.在线时长,2 as AlarmType,0 as 文件大小,ala.查询量,ala.处理量, Time from " + "( select DevId,substring(convert(varchar,[Time],120),12,5) as Time,sum(OnlineTime) as 在线时长,sum(Isnull(HandleCnt,0)) as 处理量,sum(Isnull(CXCnt,0)) as 查询量 from EverydayInfo_Hour where    Time >='" + begintime + "' and Time <='" + endtime + " 23:59' group by substring(convert(varchar,[Time],120),12,5), DevId  ) as ala " + " left join [Device] as de on de.[DevId] = ala.[DevId] left join [Entity] as en on en.[BMDM] = de.[BMDM]    left join ACL_USER as us on de.JYBH = us.JYBH where " + sreachcondi + " de.[DevType]=" + type + " ", "Alarm_EveryDayInfo");
 
 
                             dtEntity = SQLHelper.ExecuteRead(CommandType.Text, "SELECT BMDM as [ID] ,BMJC as [Name] ,SJBM as [ParentID],BMJB as [Depth] from [Entity] where [SJBM] ='" + ssdd + "' or [BMDM]='" + ssdd + "'   order BY CASE WHEN Sort IS NULL THEN 1 ELSE Sort END desc", "2");
@@ -674,7 +676,7 @@ namespace JingWuTong.Handle
                                         }).ToList<dataStruct>();
                                 }
                                 catch (Exception e) {
-
+                                    ErrExcel(e.ToString());
                                 }
 
 
@@ -1156,6 +1158,7 @@ namespace JingWuTong.Handle
             }
             catch (Exception e)
             {
+                ErrExcel(e.ToString());
                 context.Response.Write("{\"data\":\"\"}");
 
             }
@@ -1229,6 +1232,18 @@ namespace JingWuTong.Handle
         }
 
 
+        public void ErrExcel(string errstring)
+        {
+            ExcelFile excelFile = new ExcelFile();
+            ExcelWorksheet sheet = null;
+            var tmpath = "";
+            tmpath = HttpContext.Current.Server.MapPath("report\\1-3.xls");
+            excelFile.LoadXls(tmpath);
+            sheet = excelFile.Worksheets[0];
+            sheet.Rows[0].Cells["A"].Value = errstring.ToString();
+           tmpath = HttpContext.Current.Server.MapPath("upload\\log.xls");
+            excelFile.SaveXls(tmpath);
+        }
         //导出excel 
         public string ExportExcel(DataTable dt, string type, string begintime, string endtime, string entityTitle, string ssdd, string sszd, string ssddtext, string sszdtext)
         {

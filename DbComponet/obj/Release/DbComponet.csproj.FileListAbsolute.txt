@@ -31,3 +31,9 @@ E:\工作\Jingwutong_2019\DbComponet\bin\Release\GemBox.Spreadsheet.dll
 E:\工作\Jingwutong_2019\DbComponet\bin\Release\log4net.dll
 E:\工作\Jingwutong_2019\DbComponet\obj\Release\DbComponet.dll
 E:\工作\Jingwutong_2019\DbComponet\obj\Release\DbComponet.pdb
+E:\工作\Jingwutong2019_new\DbComponet\bin\Release\DbComponet.dll
+E:\工作\Jingwutong2019_new\DbComponet\bin\Release\DbComponet.pdb
+E:\工作\Jingwutong2019_new\DbComponet\bin\Release\GemBox.Spreadsheet.dll
+E:\工作\Jingwutong2019_new\DbComponet\bin\Release\log4net.dll
+E:\工作\Jingwutong2019_new\DbComponet\obj\Release\DbComponet.dll
+E:\工作\Jingwutong2019_new\DbComponet\obj\Release\DbComponet.pdb

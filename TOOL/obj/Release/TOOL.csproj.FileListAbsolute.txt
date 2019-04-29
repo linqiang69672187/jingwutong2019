@@ -26,3 +26,7 @@ E:\工作\Jingwutong_2019\TOOL\bin\Release\TOOL.dll
 E:\工作\Jingwutong_2019\TOOL\bin\Release\TOOL.pdb
 E:\工作\Jingwutong_2019\TOOL\obj\Release\TOOL.dll
 E:\工作\Jingwutong_2019\TOOL\obj\Release\TOOL.pdb
+E:\工作\Jingwutong2019_new\TOOL\bin\Release\TOOL.dll
+E:\工作\Jingwutong2019_new\TOOL\bin\Release\TOOL.pdb
+E:\工作\Jingwutong2019_new\TOOL\obj\Release\TOOL.dll
+E:\工作\Jingwutong2019_new\TOOL\obj\Release\TOOL.pdb

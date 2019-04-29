@@ -64,3 +64,14 @@ E:\工作\Jingwutong_2019\BLL\bin\Release\TOOL.pdb
 E:\工作\Jingwutong_2019\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
 E:\工作\Jingwutong_2019\BLL\obj\Release\BLL.dll
 E:\工作\Jingwutong_2019\BLL\obj\Release\BLL.pdb
+E:\工作\Jingwutong2019_new\BLL\bin\Release\BLL.dll
+E:\工作\Jingwutong2019_new\BLL\bin\Release\BLL.pdb
+E:\工作\Jingwutong2019_new\BLL\bin\Release\DAL.dll
+E:\工作\Jingwutong2019_new\BLL\bin\Release\Model.dll
+E:\工作\Jingwutong2019_new\BLL\bin\Release\TOOL.dll
+E:\工作\Jingwutong2019_new\BLL\bin\Release\DAL.pdb
+E:\工作\Jingwutong2019_new\BLL\bin\Release\Model.pdb
+E:\工作\Jingwutong2019_new\BLL\bin\Release\TOOL.pdb
+E:\工作\Jingwutong2019_new\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+E:\工作\Jingwutong2019_new\BLL\obj\Release\BLL.dll
+E:\工作\Jingwutong2019_new\BLL\obj\Release\BLL.pdb
