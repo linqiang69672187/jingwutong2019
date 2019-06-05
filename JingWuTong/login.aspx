@@ -166,7 +166,7 @@
                                                               <input type="checkbox" id="maintain" value="option1" runat="server" > 保持登录状态
                                                                  &nbsp; &nbsp; &nbsp;
                                                             <%--     <input type="checkbox" id="certificate" value="option1"  runat="server"> 数字证书登录--%>
-                                                                      <span>推荐使用 <a href="APP/69.0.3497.100_chrome_installer.exe">谷歌Chrome</a></span>
+                                                                      <span>推荐使用Chrome： <a href="APP/69.0.3497.100_chrome_installer.exe">64位</a> <a href="APP/74.0.3729.169_chrome_installer.exe">32位</a></span>
                                                                   </div>
                                                             </td>
                                                         
